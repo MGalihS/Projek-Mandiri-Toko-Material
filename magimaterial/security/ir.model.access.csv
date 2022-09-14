@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_magimaterial_kelompokbarang,access.magimaterial.kelompokbarang,model_magimaterial_kelompokbarang,,1,1,1,1
+access_magimaterial_barang,access.magimaterial.barang,model_magimaterial_barang,,1,1,1,1
+access_magimaterial_supplier,access.magimaterial.supplier,model_magimaterial_supplier,,1,1,1,1
+access_magimaterial_penjualan,access.magimaterial.penjualan,model_magimaterial_penjualan,,1,1,1,1
+access_magimaterial_detailpenjualan,access.magimaterial.detailpenjualan,model_magimaterial_detailpenjualan,,1,1,1,1
+access_magimaterial_barangdatang,access.magimaterial.barangdatang,model_magimaterial_barangdatang,,1,1,1,1

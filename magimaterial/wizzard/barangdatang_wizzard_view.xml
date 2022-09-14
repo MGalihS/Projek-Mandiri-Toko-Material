@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- magimaterial.barangdatang form view -->
+    <record id="barang_datang_view_form_wizzard" model="ir.ui.view">
+        <field name="name">Barang Datang</field>
+        <field name="model">magimaterial.barangdatang</field>
+        <field name="arch" type="xml">
+            <form string="Form Kedatangan Barang">
+                <group>
+                    <field name="barang_id" />
+                    <field name="jumlah" />
+                </group>
+
+                <footer>
+                    <button name='button_barang_datang'
+                            type='object'
+                            string='Input barang'
+                            class='btn btn-primary' />
+                    <button string='Cancel'
+                            special='cancel'
+                            class='btn btn-secondary' />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- magimaterial.barang action window -->
+    <record id="barang_datang_action_wizzard" model="ir.actions.act_window">
+        <field name="name">Kedatangan Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">magimaterial.barangdatang</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref='barang_datang_view_form_wizzard' />
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="barang_datang_menu_action_wizzard"
+        name="Input Barang"
+        parent="magimaterial_menu_root"
+        action="barang_datang_action_wizzard"
+        sequence="48"/>
+
+</odoo>

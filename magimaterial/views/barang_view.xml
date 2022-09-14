@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- magimaterial.barang tree view -->
+    <record id="magimaterial_barang_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Barang</field>
+        <field name="model">magimaterial.barang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="harga_beli"/>
+                <field name="harga_jual"/>
+                <field name="stok"/>
+                <field name="kelompokbarang_id"/>
+                <field name="supplier_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- magimaterial.barang form view -->
+    <record id="magimaterial_barang_view_from" model="ir.ui.view">
+        <field name="name">Form Barang</field>
+        <field name="model">magimaterial.barang</field>
+        <field name="arch" type="xml">
+            <form string="barang">
+             
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="harga_beli"/>
+                        <field name="harga_jual"/>
+                        <field name="stok"/>
+                    </group>
+                    <group name="kelompokbarang" string="Kelompok Barang">
+                        <field name="kelompokbarang_id"/>
+                    </group>
+                    <group name="supplier" string="Supplier">
+                        <field name="supplier_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- magimaterial.barang action window -->
+    <record id="magimaterial_barang_action" model="ir.actions.act_window">
+        <field name="name">Daftar Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">magimaterial.barang</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="magimaterial_barang_menu_act" 
+              name="Daftar Barang" 
+              parent="magimaterial_barang_menu_categ" 
+              action="magimaterial_barang_action" 
+              sequence="20"/>
+
+</odoo>

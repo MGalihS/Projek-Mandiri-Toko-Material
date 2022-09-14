@@ -1,0 +1,40 @@
+<odoo>
+    <record id="report_supplier_xlsx" model="ir.actions.report">
+        <field name="name">Print Supplier(Excel)</field>
+        <field name="model">magimaterial.supplier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">magimaterial.report_supplier_xlsx</field>
+        <field name="report_file">magimaterial.report_supplier_xlsx</field>
+        <field name="binding_model_id" ref="model_magimaterial_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+    <record id="report_supplier_pdf" model="ir.actions.report">
+        <field name="name">Print Supplier(PDF)</field>
+        <field name="model">magimaterial.supplier</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">magimaterial.report_supplier_pdf</field>
+        <field name="report_file">magimaterial.report_supplier_pdf</field>
+        <field name="binding_model_id" ref="model_magimaterial_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_penjualan_xlsx" model="ir.actions.report">
+        <field name="name">Print Penjualan(Excel)</field>
+        <field name="model">magimaterial.penjualan</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">magimaterial.report_penjualan_xlsx</field>
+        <field name="report_file">magimaterial.report_penjualan_xlsx</field>
+        <field name="binding_model_id" ref="model_magimaterial_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="report_penjualan_pdf" model="ir.actions.report">
+        <field name="name">Print Penjualan(PDF)</field>
+        <field name="model">magimaterial.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">magimaterial.report_penjualan_pdf</field>
+        <field name="report_file">magimaterial.report_penjualan_pdf</field>
+        <field name="binding_model_id" ref="model_magimaterial_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

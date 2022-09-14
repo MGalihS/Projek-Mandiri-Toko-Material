@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="magimaterial.list">
+      <field name="name">magimaterial list</field>
+      <field name="model">magimaterial.magimaterial</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="magimaterial.action_window">
+      <field name="name">magimaterial window</field>
+      <field name="res_model">magimaterial.magimaterial</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="magimaterial.action_server">
+      <field name="name">magimaterial server</field>
+      <field name="model_id" ref="model_magimaterial_magimaterial"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="magimaterial" id="magimaterial.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="magimaterial.menu_1" parent="magimaterial.menu_root"/>
+    <menuitem name="Menu 2" id="magimaterial.menu_2" parent="magimaterial.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="magimaterial.menu_1_list" parent="magimaterial.menu_1"
+              action="magimaterial.action_window"/>
+    <menuitem name="Server to list" id="magimaterial" parent="magimaterial.menu_2"
+              action="magimaterial.action_server"/>
+-->
+  </data>
+</odoo>
